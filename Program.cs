@@ -257,5 +257,6 @@ while (voto != 5)
 }
 
 Console.WriteLine($"### Número de votos ###\n Chaves: {chaves}\n Chiquinha: {chiquinha}\n Quico: {quico}\n Nulos: {nulo}");
-Console.WriteLine($"Procentagem de Votos Nulos: {(nulo / (chaves + chiquinha + quico + nulo)) * 100}%");
+double percent = ( (double) nulo / (chaves + chiquinha + quico + nulo) ) * 100;
+Console.WriteLine($"Porcentagem de Votos Nulos: {percent}%");
 Console.WriteLine($"O cadidato vencendor é: {Math.Max(chaves, Math.Max(chiquinha, quico))}");
