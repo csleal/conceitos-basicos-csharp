@@ -264,9 +264,17 @@ else if(chiquinha > chaves && chiquinha > quico)
 {
     vencedor = "Chiquinha";
 }
-else
+else if (quico > chaves && quico > chiquinha)
 {
     vencedor = "Quico";
+}
+else if (chaves == chiquinha && chiquinha == quico)
+{
+    vencedor = "empate";
+}
+else
+{
+    vencedor = "";
 }
 
 Console.WriteLine($"### Número de votos ###\n Chaves: {chaves}\n Chiquinha: {chiquinha}\n Quico: {quico}\n Nulos: {nulo}");
