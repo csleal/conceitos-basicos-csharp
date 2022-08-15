@@ -208,10 +208,10 @@ informações:
     d) O candidato vencedor.
 */
 
-int voto = 0;
+int chaves, chiquinha, quico, nulo, voto;
+chaves = chiquinha = quico = nulo = voto = 0;
 
-int chaves, chiquinha, quico, nulo;
-chaves = chiquinha = quico = nulo = 0;
+string vencedor;
 
 while (voto != 5)
 {
@@ -256,7 +256,21 @@ while (voto != 5)
     Console.Clear();
 }
 
+if (chaves > chiquinha && chaves > quico)
+{
+    vencedor = "Chaves";
+}
+else if(chiquinha > chaves && chiquinha > quico)
+{
+    vencedor = "Chiquinha";
+}
+else
+{
+    vencedor = "Quico";
+}
+
 Console.WriteLine($"### Número de votos ###\n Chaves: {chaves}\n Chiquinha: {chiquinha}\n Quico: {quico}\n Nulos: {nulo}");
 double percent = ( (double) nulo / (chaves + chiquinha + quico + nulo) ) * 100;
-Console.WriteLine($"Porcentagem de Votos Nulos: {percent}%");
-Console.WriteLine($"O cadidato vencendor é: {Math.Max(chaves, Math.Max(chiquinha, quico))}");
+Console.WriteLine($"Porcentagem de Votos Nulos: {percent:F2}%");
+// int vencedor = Math.Max(chaves, Math.Max(chiquinha, quico));
+Console.WriteLine($"O cadidato vencendor é: {vencedor}");
